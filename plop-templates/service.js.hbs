@@ -1,0 +1,14 @@
+let _examplePrivateVariable = 0
+
+const {{camelCase name}} = {
+  getExamplePrivateVariable: () => {
+    return _examplePrivateVariable
+  },
+  setExamplePrivateVariable: (n) => {
+    _examplePrivateVariable = n
+  }
+}
+
+Object.freeze({{camelCase name}})
+
+export default {{camelCase name}}

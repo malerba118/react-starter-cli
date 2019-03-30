@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { petsApi } from './services'
+
+console.log(petsApi.setExamplePrivateVariable(5))
+console.log(petsApi.getExamplePrivateVariable(5))
 
 class App extends Component {
   render() {
