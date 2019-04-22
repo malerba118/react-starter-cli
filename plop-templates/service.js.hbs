@@ -1,14 +1,18 @@
-let _examplePrivateVariable = 0
 
-const {{camelCase name}} = {
-  getExamplePrivateVariable: () => {
-    return _examplePrivateVariable
-  },
-  setExamplePrivateVariable: (n) => {
-    _examplePrivateVariable = n
+const create{{pascalCase name}} = () => {
+  let examplePrivateVariable = 0
+
+  return {
+    getExamplePrivateVariable: () => {
+      return examplePrivateVariable
+    },
+    setExamplePrivateVariable: (n) => {
+      examplePrivateVariable = n
+    }
   }
-}
+};
 
-Object.freeze({{camelCase name}})
+const singleton = create{{pascalCase name}}();
+Object.freeze(singleton);
 
-export default {{camelCase name}}
+export default singleton;
